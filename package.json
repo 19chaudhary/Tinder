@@ -1,0 +1,68 @@
+{
+  "name": "tinder-2",
+  "version": "1.0.0",
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "eject": "expo eject",
+    "test": "jest",
+    "lint": "eslint . --ext .ts,.tsx,.json --max-warnings 0",
+    "lint-and-fix": "eslint . --ext .ts,.tsx,.json --fix",
+    "prettier": "prettier src -check",
+    "prettier-format": "prettier --config .prettierrc **/*.{json,ts,tsx,css,scss,md} --write"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "jest": {
+    "preset": "jest-expo"
+  },
+  "dependencies": {
+    "@react-navigation/native": "^6.0.10",
+    "@react-navigation/native-stack": "^6.6.1",
+    "expo": "~44.0.0",
+    "expo-auth-session": "^3.5.0",
+    "expo-google-app-auth": "~8.3.0",
+    "expo-random": "^12.1.2",
+    "expo-status-bar": "~1.2.0",
+    "expo-updates": "~0.11.6",
+    "firebase": "^9.6.10",
+    "jest-expo": "^45.0.0",
+    "react": "17.0.1",
+    "react-dom": "^17.0.1",
+    "react-native": "0.64.3",
+    "react-native-deck-swiper": "^2.0.5",
+    "react-native-logs": "^2.2.1",
+    "react-native-safe-area-context": "3.3.2",
+    "react-native-screens": "~3.10.1",
+    "react-native-web": "0.17.1",
+    "twrnc": "^3.0.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@testing-library/react": "^12.1.2",
+    "@types/react": "^18.0.8",
+    "@typescript-eslint/eslint-plugin": "^3.6.1",
+    "@typescript-eslint/parser": "^3.6.1",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-plugin-jest": "^23.18.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.3",
+    "husky": "^7.0.0",
+    "jest": "^26.6.3",
+    "prettier": "^2.6.2",
+    "typescript": "~3.9.5"
+  },
+  "private": true,
+  "lint-staged": {
+    "*.{json,ts,tsx,css,scss,md}": "prettier --config .prettierrc --write",
+    "*.{ts,tsx,json}": "eslint --cache --max-warnings 0"
+  }
+}
